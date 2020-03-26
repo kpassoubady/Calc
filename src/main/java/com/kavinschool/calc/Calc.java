@@ -27,5 +27,9 @@ public class Calc {
 	public double rem() {
 		return x % y;
 	}
+	
+	public double triple() {
+		return x * x * x;
+	}
 
 }
