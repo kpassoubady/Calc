@@ -23,7 +23,7 @@
         <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>
         <sonar.projectKey>KangsCalcTest</sonar.projectKey>
         <sonar.projectName>KangsCalcTest</sonar.projectName>
-        <!--       <sonar.exclusions>src/main/java</sonar.exclusions>
+        <!--       <sonar.exclusions>src/main/java</sonar.exclusions> -->
         <!--        <sonar.test.inclusions>src/test/java/com/kavinschool/calc</sonar.test.inclusions>-->
     </properties>
     <dependencies>
