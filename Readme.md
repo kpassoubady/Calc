@@ -14,3 +14,6 @@ https://dev.azure.com/kavyatech/DemoCalculator/_TestManagement/Runs?runId=30&_a=
 
 **Quality Gates:**
 [![Quality Gate Status](https://sonarqube-azureappservice6526.azurewebsites.net/api/project_badges/measure?project=SimpleCalculator&metric=alert_status)](https://sonarqube-azureappservice6526.azurewebsites.net/dashboard?id=SimpleCalculator)
+
+Jenkins Pipeline:
+[![Build Status](http://ec2-35-153-152-182.compute-1.amazonaws.com:8080/buildStatus/icon?job=Calc-Maven-Simple-Ubuntu-Project)](http://ec2-35-153-152-182.compute-1.amazonaws.com:8080/job/Calc-Maven-Simple-Ubuntu-Project/)
