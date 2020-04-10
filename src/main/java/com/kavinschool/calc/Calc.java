@@ -42,5 +42,9 @@ public class Calc {
 	public double pow() {
 		return (int)x ^ (int)y;
 	}
+	
+	public double square4() {
+		return square() * square() ;
+	}
 
 }
