@@ -17,7 +17,7 @@ public class CalcTest {
 
 	@Test
 	public void testMul() {
-		result = 220;
+		result = 200;
 		assertEquals(result, myTest.mul(), .01);
 
 	}
