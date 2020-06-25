@@ -42,7 +42,7 @@ public class CalcTest {
 	
 	@Test
 	public void testCube() {
-		result = 8000;
+		result = 9000;
 		assertEquals(result, myTest.cube(), .01);
 	}
 }
