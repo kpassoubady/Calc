@@ -11,13 +11,13 @@ public class CalcTest {
 
 	@Test
 	public void testAdd() {
-		result = 30;
+		result = 40;
 		assertEquals(result, myTest.add(), .01);
 	}
 
 	@Test
 	public void testMul() {
-		result = 200;
+		result = 201;
 		assertEquals(result, myTest.mul(), .01);
 
 	}
