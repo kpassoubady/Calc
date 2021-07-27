@@ -2,17 +2,20 @@ node('win') {
     def mvnHome
     def javaHome
     stage('Preparation') {
-        git 'https://github.com/kpassoubady/Calc.git'
+        gitTool = tool 'GIT-WIN'
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
+        echo "gitTool=$gitTool"
+        git 'https://github.com/kpassoubady/Calc.git'
     }
     stage('Build') {
         // Run the maven build
         withEnv([
                 "MVN_HOME=$mvnHome",
                 "JAVA_HOME=$javaHome",
-                "PATH=$javaHome\bin:$PATH"
+                "PATH=.:C:\\WINDOWS\\SYSTEM32;$mvnHome\\bin;$javaHome\bin:$PATH"
         ]) {
+            echo "PATH=$PATH"
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
         }
     }
