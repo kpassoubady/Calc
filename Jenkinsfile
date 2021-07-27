@@ -11,7 +11,7 @@ node('win') {
         withEnv([
                 "MVN_HOME=$mvnHome",
                 "JAVA_HOME=$javaHome",
-                "PATH=$javaHome\bin:$PATH"
+                "PATH=$javaHome\bin;$PATH"
         ]) {
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean verify -P cobertura,jacoco/)
         }
