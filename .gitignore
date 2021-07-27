@@ -58,3 +58,4 @@ mintty.exe.stackdump
 *.iml
 .allure/
 .svn
+.idea/
