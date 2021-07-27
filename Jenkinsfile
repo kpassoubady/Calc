@@ -1,4 +1,4 @@
-node('win1') {
+node('win2') {
     def mvnHome
     def javaHome
     stage('Preparation') {
