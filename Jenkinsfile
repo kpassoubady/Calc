@@ -20,8 +20,6 @@ node('win1') {
     }
 
     stage("Quality Gate 2") {
-        steps {
-            waitForQualityGate abortPipeline: true
-        }
+       waitForQualityGate abortPipeline: true
     }
 }
