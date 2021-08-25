@@ -4,7 +4,8 @@ node('win1') {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def mvn = tool 'MVN-WIN';
+    def mvnHome = tool 'MVN-WIN';
+    def javaHome = tool 'JDK11-WIN'
     withEnv([
                     "MVN_HOME=$mvnHome",
                     "JAVA_HOME=$javaHome",
