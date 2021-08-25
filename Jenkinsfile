@@ -19,7 +19,7 @@ node('win1') {
         }
     }
 
-    stage("Quality Gate 2") {
-       waitForQualityGate(webhookSecretId: '8c4f1b39c015c67d775e03a1b53314eb7e3d913d')
-    }
+//     stage("Quality Gate 2") {
+//        waitForQualityGate(webhookSecretId: '8c4f1b39c015c67d775e03a1b53314eb7e3d913d')
+//     }
 }
