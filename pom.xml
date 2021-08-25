@@ -21,6 +21,9 @@
         <sonar.links.homepage>https://sonarqube-azureappservice0a95.azurewebsites.net/dashboard?id=KangsCalcTest
         </sonar.links.homepage>
         <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>
+<!--        <sonar.links.homepage>https://sonarqube-azureappservice0a95.azurewebsites.net/dashboard?id=KangsCalcTest-->
+<!--        </sonar.links.homepage>-->
+<!--        <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>-->
         <sonar.projectKey>KangsCalcTest</sonar.projectKey>
         <sonar.projectName>KangsCalcTest</sonar.projectName>
         <!--       <sonar.exclusions>src/main/java</sonar.exclusions> -->
@@ -51,7 +54,7 @@
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>3.6.0.1398</version>
+                    <version>3.9.0.2155</version>
                 </plugin>
             </plugins>
         </pluginManagement>
