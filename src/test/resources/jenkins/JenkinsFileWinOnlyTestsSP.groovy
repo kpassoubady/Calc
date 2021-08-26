@@ -13,10 +13,10 @@ node('win1') {
                 "PATH=.:C:\\WINDOWS\\SYSTEM32;$mvnHome\\bin;$javaHome\\bin;$PATH"
         ]) {
             echo "PATH=$PATH"
-            bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+            bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean test/)
         }
     }
-    stage('Results') {
+    stage('Test') {
         junit '**/target/surefire-reports/TEST-*.xml'
     }
 }
