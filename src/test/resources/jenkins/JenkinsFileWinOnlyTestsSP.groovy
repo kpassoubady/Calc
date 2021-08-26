@@ -7,7 +7,6 @@ node('win') {
         javaHome = tool 'JDK11-WIN'
     }
     stage('Build') {
-        // Run the maven build
         withEnv([
                 "MVN_HOME=$mvnHome",
                 "JAVA_HOME=$javaHome",
@@ -16,8 +15,7 @@ node('win') {
             bat(/"%MVN_HOME%\bin\mvn" clean test/)
         }
     }
-    stage('Results') {
+    stage('Test Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
-        archiveArtifacts 'target/*.jar'
     }
 }
