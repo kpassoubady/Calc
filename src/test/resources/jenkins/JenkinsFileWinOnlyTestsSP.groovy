@@ -1,13 +1,12 @@
 node('win1') {
     def mvnHome
     def javaHome
-    stage('Preparation') {
+    stage('SCM') {
         gitTool = tool 'GIT-WIN'
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
         echo "gitTool=$gitTool"
-        //git 'https://github.com/kpassoubady/Calc.git'
-        scm checkout
+        git 'https://github.com/kpassoubady/Calc.git'
     }
     stage('Build') {
         withEnv([
