@@ -45,4 +45,10 @@ public class CalcTest {
 		result = 8000;
 		assertEquals(result, myTest.cube(), .01);
 	}
+
+	@Test
+	public void testRem() {
+		result = 0;
+		assertEquals(result, myTest.rem(), .01);
+	}
 }
