@@ -31,6 +31,6 @@ node('win') {
     }
 
     stage('Slack Notifications') {
-        slackSend channel: '202108_jenkins_fundamentals', color: 'good', message: '${JOB_NAME} completed', teamDomain: 'jenksinschool', tokenCredentialId: 'slackCredentialsID'
+        slackSend channel: '202108_jenkins_fundamentals', color: 'good', message: '${JOB_NAME} completed', tokenCredentialId: 'slackCredentialsID'
     }
 }
