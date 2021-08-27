@@ -16,12 +16,12 @@ node('win') {
                 "PATH=.:C:\\WINDOWS\\SYSTEM32;$mvnHome\\bin;$javaHome\\bin;$PATH"
         ]) {
             echo "PATH=$PATH"
-            bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean test/)
+            bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
         }
     }
     stage('Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
-        //archiveArtifacts 'target/*.jar'
+        archiveArtifacts 'target/*.jar'
         //cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/target/site/cobertura/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
     }
 }
