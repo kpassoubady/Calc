@@ -14,7 +14,7 @@ node('win1') {
         ]) {
             echo "PATH=$PATH"
             withSonarQubeEnv() {
-                bat(/"%MVN_HOME%\bin\mvn" sonar:sonar/)
+                bat(/"%MVN_HOME%\bin\mvn" clean package sonar:sonar/)
             }
         }
     }
