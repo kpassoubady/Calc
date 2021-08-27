@@ -14,12 +14,14 @@ node('win1') {
         ]) {
             echo "PATH=$PATH"
             withSonarQubeEnv() {
-                bat(/"%MVN_HOME%\bin\mvn" clean package sonar:sonar/)
+                bat(/"%MVN_HOME%\bin\mvn" sonar:sonar/)
             }
         }
     }
 
-//     stage("Quality Gate 2") {
-//        waitForQualityGate(webhookSecretId: '8c4f1b39c015c67d775e03a1b53314eb7e3d913d')
-//     }
+    stage("Quality Gate 2") {
+        steps {
+            waitForQualityGate abortPipeline: true
+        }
+    }
 }

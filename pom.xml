@@ -9,8 +9,8 @@
     <name>calc</name>
     <description>Simple Calculator</description>
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
@@ -18,11 +18,15 @@
         <sonar.sources>src/main/java/com/kavinschool/calc</sonar.sources>
         <sonar.tests>src/test/java/com/kavinschool/calc</sonar.tests>
         <sonar.coverage.exclusions></sonar.coverage.exclusions>
-        <sonar.links.homepage>https://sonarqube-azureappservice0a95.azurewebsites.net/dashboard?id=KangsCalcTest
+        <sonar.links.homepage>http://ec2-54-219-40-60.us-west-1.compute.amazonaws.com:9000/sonarqube/dashboard?id=KangsCalcTest
         </sonar.links.homepage>
-        <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>
+        <sonar.host.url>http://ec2-54-219-40-60.us-west-1.compute.amazonaws.com:9000/sonarqube</sonar.host.url>
         <sonar.projectKey>KangsCalcTest</sonar.projectKey>
         <sonar.projectName>KangsCalcTest</sonar.projectName>
+<!--        <sonar.links.homepage>https://sonarqube-azureappservice0a95.azurewebsites.net/dashboard?id=KangsCalcTest-->
+<!--        </sonar.links.homepage>-->
+<!--        <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>-->
+
         <!--       <sonar.exclusions>src/main/java</sonar.exclusions> -->
         <!--        <sonar.test.inclusions>src/test/java/com/kavinschool/calc</sonar.test.inclusions>-->
     </properties>
@@ -51,7 +55,7 @@
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>3.6.0.1398</version>
+                    <version>3.9.0.2155</version>
                 </plugin>
             </plugins>
         </pluginManagement>
