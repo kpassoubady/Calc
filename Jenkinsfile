@@ -23,14 +23,14 @@ node('win') {
         junit '**/target/surefire-reports/TEST-*.xml'
         archiveArtifacts 'target/*.jar'
         //cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/target/site/cobertura/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
-        cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/target/site/cobertura/coverage.xml', conditionalCoverageTargets: '60, 0, 0', failNoReports: false, failUnhealthy: false, failUnstable: false, lineCoverageTargets: '70, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '50, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+        //cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/target/site/cobertura/coverage.xml', conditionalCoverageTargets: '60, 0, 0', failNoReports: false, failUnhealthy: false, failUnstable: false, lineCoverageTargets: '70, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '50, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
     }
 
-    stage('Email Notifications') {
-        mail bcc: '', body: "Please visit ${BUILD_URL} for more information", cc: '', from: 'kangs@kavinschool.com', replyTo: '', subject: "${JOB_NAME} build completed", to: 'kangs@kavinschool.com'
-    }
+    //stage('Email Notifications') {
+    //    mail bcc: '', body: "Please visit ${BUILD_URL} for more information", cc: '', from: 'kangs@kavinschool.com', replyTo: '', subject: "${JOB_NAME} build completed", to: 'kangs@kavinschool.com'
+    //}
 
-    stage('Slack Notifications') {
-        slackSend channel: '202108_jenkins_fundamentals', color: 'good', message: "${JOB_NAME} completed", tokenCredentialId: 'slackCredentialsID'
-    }
+    //stage('Slack Notifications') {
+    //    slackSend channel: '202108_jenkins_fundamentals', color: 'good', message: "${JOB_NAME} completed", tokenCredentialId: 'slackCredentialsID'
+    //}
 }
