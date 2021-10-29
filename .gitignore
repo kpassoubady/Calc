@@ -37,7 +37,8 @@
 ehthumbs.db
 Thumbs.db
 .pmd
-
+*.iml
+g
 # Eclipse    #
 ##############
 .classpath
