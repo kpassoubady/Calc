@@ -10,8 +10,7 @@ node('win') {
     }
 
     stage('Checkout') {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], gitTool: 'GIT-WIN', userRemoteConfigs: [[url: 'https://github.com/kpassoubady/Calc.git']]])
-        git pull
+        checkout([$class: 'GitSCM', branches: [[name: "$BRANCH_NAME"]], extensions: [[$class: 'WipeWorkspace']], gitTool: 'GIT-WIN', userRemoteConfigs: [[url: 'https://github.com/kpassoubady/Calc.git']]])
     }
 
     stage('Build') {
