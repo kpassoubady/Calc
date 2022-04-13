@@ -47,4 +47,8 @@ public class Calc {
 		return square() * square() ;
 	}
 
+	public double abs(double x) {
+		return Math.abs(x);
+	}
+
 }
