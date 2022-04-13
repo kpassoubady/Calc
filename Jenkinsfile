@@ -2,11 +2,11 @@ node('win') {
     def mvnHome
     def javaHome
     stage('Preparation') {
-        //gitTool = tool 'GIT-WIN'
+        gitTool = tool 'GIT-WIN'
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
-        //echo "gitTool=$gitTool"
-        //git 'https://github.com/kpassoubady/Calc.git'
+        echo "gitTool=$gitTool"
+        git 'https://github.com/kpassoubady/Calc.git'
     }
 
     stage('Checkout') {
