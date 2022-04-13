@@ -6,8 +6,14 @@ node('win') {
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
         echo "gitTool=$gitTool"
-        git 'https://github.com/kpassoubady/Calc.git'
+        //git 'https://github.com/kpassoubady/Calc.git'
+        git branch: "$BRANCH_NAME", url: 'https://github.com/kpassoubady/Calc.git'
     }
+
+    stage('Checkout') {
+        checkout([$class: 'GitSCM', branches: [[name: "$BRANCH_NAME"]], extensions: [[$class: 'WipeWorkspace']], gitTool: 'GIT-WIN', userRemoteConfigs: [[url: 'https://github.com/kpassoubady/Calc.git']]])
+    }
+
     stage('Build') {
         // Run the maven build
         withEnv([
