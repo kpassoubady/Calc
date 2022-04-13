@@ -51,4 +51,10 @@ public class CalcTest {
 		result = 0;
 		assertEquals(result, myTest.rem(), .01);
 	}
+
+	@Test
+	public void testAbs() {
+		result = 100;
+		assertEquals(result, myTest.abs(-100), .01);
+	}
 }
