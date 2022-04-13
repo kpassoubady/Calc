@@ -11,7 +11,8 @@ public class CalcTest {
 
 	@Test
 	public void testAdd() {
-		result = 30;
+		//Making this test case to fail
+		result = 35;
 		assertEquals(result, myTest.add(), .01);
 	}
 
