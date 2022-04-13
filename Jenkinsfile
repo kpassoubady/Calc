@@ -2,12 +2,17 @@ node('win') {
     def mvnHome
     def javaHome
     stage('Preparation') {
-        gitTool = tool 'GIT-WIN'
+        //gitTool = tool 'GIT-WIN'
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
-        echo "gitTool=$gitTool"
-        git 'https://github.com/kpassoubady/Calc.git'
+        //echo "gitTool=$gitTool"
+        //git 'https://github.com/kpassoubady/Calc.git'
     }
+
+    stage('Checkout') {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], gitTool: 'GIT-WIN', userRemoteConfigs: [[url: 'https://github.com/kpassoubady/Calc.git']]])
+    }
+    
     stage('Build') {
         // Run the maven build
         withEnv([
