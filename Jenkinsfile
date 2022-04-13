@@ -6,7 +6,8 @@ node('win') {
         mvnHome = tool 'MVN-WIN'
         javaHome = tool 'JDK11-WIN'
         echo "gitTool=$gitTool"
-        git 'https://github.com/kpassoubady/Calc.git'
+        //git 'https://github.com/kpassoubady/Calc.git'
+        git branch: "$BRANCH_NAME", url: 'https://github.com/kpassoubady/Calc.git'
     }
 
     stage('Checkout') {
