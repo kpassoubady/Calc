@@ -11,8 +11,9 @@ node('win') {
 
     stage('Checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], gitTool: 'GIT-WIN', userRemoteConfigs: [[url: 'https://github.com/kpassoubady/Calc.git']]])
+        git pull
     }
-    
+
     stage('Build') {
         // Run the maven build
         withEnv([
