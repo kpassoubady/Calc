@@ -39,4 +39,10 @@ public class CalcTest {
 		result = 40;
 		assertEquals(result, myTest.square(), .01);
 	}
+	
+	@Test
+	public void testPow() {
+		result = 8;
+		assertEquals(result, myTest.pow(2,3), .01);
+	}
 }
