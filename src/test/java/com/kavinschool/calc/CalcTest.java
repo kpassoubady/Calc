@@ -36,7 +36,6 @@ public class CalcTest {
 	
 	@Test
 	public void testCube() {
-		result = 8;
-		assertEquals(result, myTest.cube(), .01);
+		assertEquals(800, myTest.cube(), 0.0);
 	}
 }
