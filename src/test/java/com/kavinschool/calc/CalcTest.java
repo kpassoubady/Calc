@@ -33,4 +33,10 @@ public class CalcTest {
 		result = 2;
 		assertEquals(result, myTest.div(), .01);
 	}
+	
+	@Test
+	public void testCube() {
+		result = 8;
+		assertEquals(result, myTest.cube(), .01);
+	}
 }
