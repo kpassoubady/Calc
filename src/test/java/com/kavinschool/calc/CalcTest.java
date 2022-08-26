@@ -11,7 +11,7 @@ public class CalcTest {
 
 	@Test
 	public void testAdd() {
-		result = 30;
+		result = 40;
 		assertEquals(result, myTest.add(), .01);
 	}
 
@@ -36,7 +36,7 @@ public class CalcTest {
 
 	@Test
 	public void testSquare() {
-		result = 400;
+		result = 500;
 		assertEquals(result, myTest.square(), .01);
 	}
 	
