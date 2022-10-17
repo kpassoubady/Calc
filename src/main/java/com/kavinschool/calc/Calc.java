@@ -40,7 +40,7 @@ public class Calc {
 	}
 
 	public double pow() {
-		return (int)x ^ (int)y;
+		return Math.pow(x,y);
 	}
 	
 	public double square4() {
