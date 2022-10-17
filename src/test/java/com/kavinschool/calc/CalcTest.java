@@ -51,4 +51,11 @@ public class CalcTest {
 		result = 0;
 		assertEquals(result, myTest.rem(), .01);
 	}
+	
+	@Test
+	public void testPower() {
+		result = 10240000000000;
+		assertEquals(result, myTest.pow(), .01);
+	}
+	
 }
