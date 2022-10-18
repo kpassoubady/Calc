@@ -29,9 +29,4 @@ node('win') {
     stage('Email Notifications') {
         mail bcc: '', body: "Please visit ${BUILD_URL} for more information", cc: '', from: 'kangs@kavinschool.com', replyTo: '', subject: "${JOB_NAME} build completed", to: 'kangs@kavinschool.com'
     }
-
-    stage('Slack Notifications') {
-        def slackChannel = "202110_jenkins_fundamentals"
-        slackSend channel: slackChannel, color: 'good', message: "${JOB_NAME} completed", tokenCredentialId: 'slackCredentialsID'
-    }
 }
