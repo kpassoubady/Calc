@@ -30,7 +30,4 @@ node('win') {
         mail bcc: '', body: "Please visit ${BUILD_URL} for more information", cc: '', from: 'kangs@kavinschool.com', replyTo: '', subject: "${JOB_NAME} build completed", to: 'kangs@kavinschool.com'
     }
 
-    stage('Slack Notifications') {
-        slackSend channel: '202108_jenkins_fundamentals', color: 'good', message: "${JOB_NAME} completed", tokenCredentialId: 'slackCredentialsID'
-    }
 }
