@@ -19,7 +19,8 @@
         <sonar.tests>src/test/java/com/kavinschool/calc</sonar.tests>
         <sonar.coverage.exclusions></sonar.coverage.exclusions>
         <sonar.host.url>http://ec2-3-137-69-242.us-east-2.compute.amazonaws.com:9000</sonar.host.url>
-
+        <!-- <sonar.projectKey>KangsCalcTest</sonar.projectKey> -->
+        <!-- <sonar.projectName>KangsCalcTest</sonar.projectName> -->
 <!--        <sonar.links.homepage>https://sonarqube-azureappservice0a95.azurewebsites.net/dashboard?id=KangsCalcTest-->
 <!--        </sonar.links.homepage>-->
 <!--        <sonar.host.url>https://sonarqube-azureappservice0a95.azurewebsites.net/</sonar.host.url>-->
