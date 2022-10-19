@@ -3,7 +3,8 @@ node('win') {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def mvn = tool 'MVN-WIN';
+    def mvn = tool 'MVN-WIN'
+    def javaHome = tool 'JDK11-WIN'
     withSonarQubeEnv() {
     withEnv(["JAVA_HOME=$javaHome",
              "PATH=.:C:\\WINDOWS\\SYSTEM32;$mvn\\bin;$javaHome\\bin;$PATH"
